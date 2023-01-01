@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>jQueryCSS</title>
+</head>
+<body>
+    Syntax:
+    css("propertyname","value");
+    <br>
+    <a href="#" id="anchor"> i am practicing jQuery 
+        and in this particular file we will learn how to style any page using jQuery:
+    </a>
+    <br>
+    <button id="jQueryCSS">Click me Kid</button>
+
+    <script>
+        $(document).ready(function()
+        {
+            $('#jQueryCSS').click(function(){
+                $('#anchor').css({"textDecoration":"none","backgroundColor":"red","fontSize":"30px", "color":"yellow"
+            });
+            $('#jQueryCSS').css({"backgroundColor":"green","fontSize":"30px"});
+           
+
+            });
+        });
+    </script>
+</body>
+</html>

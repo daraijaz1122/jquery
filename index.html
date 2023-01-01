@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="test"> 
+        <p >
+            jQuery is a JavaScript library primarily designed with the purpose to make it easier to use JavaScript
+             on our website. jQuery wraps many lines of JavaScript code into methods that we can call with a 
+             single line of code. Google provides CDN support for jQuery via the googleapis.com domain. 
+             The latest version of Google CDN provides four different types of jQuery versions- normal 
+             (uncompressed), minified, slim, and slim & minified. Google CDN provides the jQuery
+              via ajax.googleapis.com domain.
+        </p>
+    </div>
+    <br>
+
+    <br>
+    <div id="test2">
+<p>
+    jquery.js is the normal jQuery file that is uncompressed. 
+    This version is bigger than the others with all functions included.
+
+query.min.js is the minified version of the jQuery where spaces and unnecessary
+ characters are removed to make the size less.
+</p>
+
+    </div>
+    <br>
+    <br>
+    <ul>
+
+        <li class="one">
+            Since the jQuery file is loaded from Google CDN and not from your website,
+             it decreases the load on your website. It improves the overall performance of the website.
+        </li>
+    
+        <br>
+        
+        <li class="two">
+            Google has servers all over the world 
+            decreasing the latency. It ensures that the user will get geographically close responses.
+
+        </li>
+    </ul>
+    <button id="hideandseek">click me</button>
+    <button class="unhide">if its hidden click me</button>
+
+
+    <script>
+       // document.getElementById('test').innerHTML="hello world! by javascript;"
+    //    $(document).ready(function()
+    //    {
+    //     $('#test').text('hello world by jQuery!');
+    //    });
+    // function hideandseek(){
+    //     document.getElementById('test').style.display="none";
+    // }
+    $(document).ready(function(){
+        $('#hideandseek').click(function(){
+            $('li:last').hide(5000);
+            $('#test').hide(5000);
+        })
+    })
+    $(document).ready(function(){
+        $('.unhide').click(function(){
+            $('li:last').show(5000);
+            $('#test').show(5000);
+        })
+    })
+
+        
+    </script>
+</body>
+</html>

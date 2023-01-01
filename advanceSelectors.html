@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>advanceSelector</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div style="width: 50%;
+    margin: auto;">
+        <ol type="1">
+            <li>index 0: HTML</li>
+            <li>index 1: CSS</li>
+            <li>index 2: ajax</li>
+            <li>index 3: MYSQL</li>
+            <li>index 4: JAVA</li>
+            <li>index 5: BOOTSTRAP</li>
+        </ol>
+        <ol  id="second">
+            <li>index 0: HTML</li>
+            <li>index 1: CSS</li>
+            <li>index 2: ajax</li>
+            <li>index 3: MYSQL</li>
+            <li>index 4: JAVA</li>
+            <li>index 5: BOOTSTRAP</li>
+        </ol>
+        
+        <button id="btn">click me</button>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                $('li:nth-last-child(3)').css("backgroundColor","red");
+            });
+
+        });
+    </script>
+</body>
+</html>

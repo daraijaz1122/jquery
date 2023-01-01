@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>form validation in jQuery</title>
+    <style>
+        .container {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            border: solid 2px green;
+
+            margin-left: 20%;
+            padding: 20px;
+        }
+
+        input {
+            margin-left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">form validation</h1>
+
+        <form action="">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" placeholder="enter username">
+                <div class="show-error"></div>
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="text" name="password" id="password" placeholder="enter password">
+
+            </div>
+            <div class="pass-error"></div>
+            <br>
+            <div class="checkbox">
+                <label><input type="checkbox">Remember me</label>
+            </div>
+            <br>
+
+            <button class="submit">submit</button>
+
+
+        </form>
+    </div>
+    <script>
+
+        $(document).ready(function () {
+            $('.submit').click(function () {
+                var user = $("#username").val();
+                var pass = $("#password").val();
+                if (user == "") {
+                    $(".show-error").html('*this field cannot be empty');
+                    $(".show-error").css("color", "red");
+                    return false;
+                }
+                // if(user<=2 || user>26)
+                // $(".show-error").html('*username must be greater than 3 and less than 26 characters');
+                // $(".show-error").css("color","red");
+                // return false;
+                if (pass == "") {
+                    $(".pass-error").html("password cannot be empty");
+                    $(".pass-error").css("color", "red");
+                    return false;
+                }
+
+            })
+        })
+    </script>
+
+
+
+
+    </form>
+</body>
+
+</html>

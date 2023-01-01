@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>slideupAndslidedown</title>
+    <style>
+        div{
+            text-align: center;
+
+        }
+        .flip{
+            background-color: coral;
+        }
+        .panel{
+            background-color: chartreuse;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">slide up and slide down effects in jQuery</h1>
+    <br>
+    <div class="flip"> touch here to slide down panel</div>
+    <div class="panel">
+        welcome to panel
+    </div>
+    <script>
+        $(document).ready(function(){
+            
+            $('.panel').css("display","none");
+            //slidedown.
+            // $('.flip').click(function(){
+            //     $('.panel').slideDown('slow');
+            // });
+            // //slideUp.
+            // $('.flip').dblclick(function(){
+            //     $('.panel').slideUp('slow');
+            // });
+            //slideTOggle.
+            $('.flip').click(function(){
+                $('.panel').slideToggle("slow");
+            });
+
+        });
+    </script>
+</body>
+</html>
